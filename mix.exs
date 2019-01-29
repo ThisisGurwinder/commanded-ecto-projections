@@ -39,7 +39,7 @@ defmodule Commanded.Projections.Ecto.Mixfile do
   defp deps do
     [
       {:commanded,  git: "https://github.com/ThisisGurwinder/commanded.git", runtime: false},
-      {:ecto, "~>  2.1", override: true, runtime: false},
+      {:ecto, [env: :prod, git: "https://github.com/ThisisGurwinder/ecto.git", branch: "v2.0"]},
       {:ecto_sql, git: "https://github.com/ThisisGurwinder/ecto_sql.git", runtime: false},
       {:postgrex, "~> 0.14", only: :test},
 
